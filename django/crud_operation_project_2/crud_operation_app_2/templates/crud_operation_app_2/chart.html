@@ -1,0 +1,147 @@
+<html>
+<head>
+<style>
+    
+.loader,
+.loader:after {
+border-radius: 50%;
+width: 7em;
+height: 7em;
+}
+.inline-spinner-container .lbl{
+margin-right:15px;
+line-height:1.6;
+}
+.inline-spinner-container{
+display:flex;
+}
+.inline-spinner-container .loader, .inline-spinner-container .loader:after {
+border-radius: 50%;
+width: 2em;
+height: 2em;
+}
+.loader {
+margin: 40vh auto;
+font-size: 10px;
+position: relative;
+text-indent: -9999em;
+border-top: 1.1em solid rgba(0, 0, 0, 0.2);
+border-right: 1.1em solid rgba(0, 0, 0, 0.2);
+border-bottom: 1.1em solid rgba(0, 0, 0, 0.2);
+border-left: 1.1em solid #333;
+-webkit-transform: translateZ(0);
+-ms-transform: translateZ(0);
+transform: translateZ(0);
+-webkit-animation: load-container 1.1s infinite linear;
+animation: load-container 1.1s infinite linear;
+}
+.inline-spinner-container .loader {
+margin:0;
+border-top: 0.3em solid rgba(0, 0, 0, 0.2);
+border-right: 0.3em solid rgba(0, 0, 0, 0.2);
+border-bottom: 0.3em solid rgba(0, 0, 0, 0.2);
+border-left: 0.3em solid #333;
+}
+@-webkit-keyframes load-container {
+0% {
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+}
+100% {
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+}
+@keyframes load-container {
+0% {
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+}
+100% {
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+}
+.spinner-container{
+width:100%;
+height:100%;
+background-color:#fff7;
+position:absolute;
+top:0;
+left:0;
+}
+
+</style>
+</head>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script>
+
+    let socket =new WebSocket('ws://localhost:8000/ws/polData');
+    socket.onopen =function(e){
+        alert('Connection established');
+    };
+
+    socket.onmessage = function(e){
+        console.log(e.data);
+        var recData=JSON.parse(e.data);
+        dataObjNew=dataObj['data']['datasets'][0]['data'];
+        dataObjNew.shift();
+        dataObjNew.push(recData.value);
+        dataObj['data']['datasets'][0]['data']=dataObjNew;
+        window.myLine.update();
+
+    };
+
+    socket.onclose = function(e){
+        alert('Connection CLosed');
+    };
+
+    </script>
+<body>
+    <div style="max-width: 900px; max-height: 400px;">
+        <canvas id="myChart" width="900" height="400"></canvas>
+    </div>
+
+     <div id="spinner" class="spinner-container">
+            <div class="load-container">
+                <div class="loader">Loading...</div>
+            </div>
+        </div>
+       
+       <!--  <script>
+            function fnLoad(){
+                window.setTimeout(function(){
+                    document.getElementById('spinner').style.display = "none";
+                }, 1000);
+            }
+        </script>
+ -->
+
+</body>
+
+    <script>
+    var dataObj={
+        type: 'line',
+        data: {
+            labels: [1,2,3,4,5,6],
+            datasets: [{
+                label: 'Real time data',
+                data: [12, 19, 3, 5, 2, 3],
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    }
+    var ctx = document.getElementById('myChart').getContext('2d');
+    window.myLine = new Chart(ctx,dataObj );
+    </script>
+</html>

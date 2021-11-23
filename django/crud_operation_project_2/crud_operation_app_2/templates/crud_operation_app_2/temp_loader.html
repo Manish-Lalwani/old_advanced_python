@@ -1,0 +1,147 @@
+<html>
+<head>
+<style>
+    
+.loader,
+.loader:after {
+border-radius: 50%;
+width: 7em;
+height: 7em;
+}
+.inline-spinner-container .lbl{
+margin-right:15px;
+line-height:1.6;
+}
+.inline-spinner-container{
+display:flex;
+}
+.inline-spinner-container .loader, .inline-spinner-container .loader:after {
+border-radius: 50%;
+width: 2em;
+height: 2em;
+}
+.loader {
+margin: 40vh auto;
+font-size: 10px;
+position: relative;
+text-indent: -9999em;
+border-top: 1.1em solid rgba(0, 0, 0, 0.2);
+border-right: 1.1em solid rgba(0, 0, 0, 0.2);
+border-bottom: 1.1em solid rgba(0, 0, 0, 0.2);
+border-left: 1.1em solid #333;
+-webkit-transform: translateZ(0);
+-ms-transform: translateZ(0);
+transform: translateZ(0);
+-webkit-animation: load-container 1.1s infinite linear;
+animation: load-container 1.1s infinite linear;
+}
+.inline-spinner-container .loader {
+margin:0;
+border-top: 0.3em solid rgba(0, 0, 0, 0.2);
+border-right: 0.3em solid rgba(0, 0, 0, 0.2);
+border-bottom: 0.3em solid rgba(0, 0, 0, 0.2);
+border-left: 0.3em solid #333;
+}
+@-webkit-keyframes load-container {
+0% {
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+}
+100% {
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+}
+@keyframes load-container {
+0% {
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+}
+100% {
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+}
+.spinner-container{
+width:100%;
+height:100%;
+background-color:#fff7;
+position:absolute;
+top:0;
+left:0;
+text-align: center;
+}
+
+.loader-txt{
+width: 100%;
+padding: 10px;
+font-size: 20px;
+text-align: center;
+color: #333;
+margin-top: 0;
+display: inline-block;
+width: 100px;
+}
+
+.load-container{
+height:100px;
+}
+
+</style>
+</head>
+
+
+
+<body>
+	<div id="spinner" class="spinner-container">
+            <div class="load-container">
+                <div class="loader">Loading...</div>
+            </div>
+
+            <div class="loader-txt" id="percentage-id">0%</div>
+        </div>
+  
+
+
+<script type="text/javascript">
+	let socket = new WebSocket("ws://localhost:8000/ws/loader");
+
+socket.onopen = function(e) {
+  console.log("[open] Connection established");
+  console.log("Sending to server");
+  //socket.send("My name is John");
+};
+
+socket.onmessage = function(event) {
+  // alert(`[message] Data received from server: ${event.data}`);
+  //console.log(event.data);
+  percent_load = JSON.parse(event.data);
+  if (percent_load.value.split(":")[0].toLowerCase()=="status"){
+  	document.getElementById("percentage-id").innerHTML=percent_load.value.split(":")[2]+"% "+percent_load.value.split(":")[1] + "Loaded" ;
+  	if (Number(percent_load.value.split(":")[2])>=100)
+  	{
+  		window.location.href="http://127.0.0.1:8000/crud_operation_app/list/";
+  	}
+  }
+  
+};
+
+socket.onclose = function(event) {
+  if (event.wasClean) {
+    alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+  } else {
+    // e.g. server process killed or network down
+    // event.code is usually 1006 in this case
+    alert('[close] Connection died');
+  }
+};
+
+socket.onerror = function(error) {
+  alert(`[error] ${error.message}`);
+};
+</script>
+
+
+	     
+</body>
+</html>

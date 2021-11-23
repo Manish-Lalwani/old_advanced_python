@@ -1,0 +1,30 @@
+{% extends "crud_operation_app_2/index.html" %}
+
+{% block content%}
+
+  <tr>
+  	<th>ID</th>
+    <th>Test Run ID</th>
+    <th>Test Case</th>
+    <th>On Meter</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Status</th>
+  </tr>
+	</thead>
+	<tbody>
+  {% for x in test_data %}
+    	<tr>
+  		<td>{{x.tid}}</td>
+  		<td>{{x.test_run_id}}</td>
+  		<td>{{x.on_meter}}</td>
+  		<td>{{x.start_time}}</td>
+  		<td>{{x.end_time}}</td>
+  		<td>{{x.status}}</td>
+  		
+  	</tr>
+  {% endfor %}
+
+
+{% endblock content%}
+

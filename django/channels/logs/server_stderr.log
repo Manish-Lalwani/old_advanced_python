@@ -1,0 +1,63 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+[22/Sep/2020 17:48:48] "GET /crud_operation_app/list/ HTTP/1.1" 200 8602
+[22/Sep/2020 17:48:48] "GET /static/images/sort_both.png HTTP/1.1" 404 1684
+[22/Sep/2020 17:48:48] "GET /static/images/sort_asc.png HTTP/1.1" 404 1681
+Watching for file changes with StatReloader
+[22/Sep/2020 17:49:44] "GET /crud_operation_app/list/ HTTP/1.1" 200 8602
+[22/Sep/2020 17:49:44] "GET /static/css/jquery.dataTables.css HTTP/1.1" 200 16238
+[22/Sep/2020 17:49:44] "GET /static/js/jquery.dataTables.js HTTP/1.1" 200 464598
+[22/Sep/2020 17:49:45] "GET /static/icons/info.svg HTTP/1.1" 200 1240
+[22/Sep/2020 17:49:45] "GET /static/icons/notification.svg HTTP/1.1" 200 1348
+[22/Sep/2020 17:49:45] "GET /static/icons/settings.svg HTTP/1.1" 200 3366
+[22/Sep/2020 17:49:45] "GET /static/images/sort_both.png HTTP/1.1" 404 1684
+[22/Sep/2020 17:49:45] "GET /static/images/sort_asc.png HTTP/1.1" 404 1681
+Not Found: /favicon.ico
+[22/Sep/2020 17:49:45] "GET /favicon.ico HTTP/1.1" 404 2109
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+[22/Sep/2020 17:54:05] "GET /crud_operation_app/list/ HTTP/1.1" 200 8602
+Not Found: /favicon.ico
+[22/Sep/2020 17:54:05] "GET /favicon.ico HTTP/1.1" 404 2109
+[22/Sep/2020 17:54:05] "GET /static/images/sort_both.png HTTP/1.1" 404 1684
+[22/Sep/2020 17:54:16] "GET /static/images/sort_asc.png HTTP/1.1" 404 1681
+Watching for file changes with StatReloader
+[23/Sep/2020 13:23:27] "GET /crud_operation_app/list/ HTTP/1.1" 200 8602
+[23/Sep/2020 13:23:27] "GET /static/css/jquery.dataTables.css HTTP/1.1" 304 0
+[23/Sep/2020 13:23:27] "GET /static/js/jquery.dataTables.js HTTP/1.1" 304 0
+[23/Sep/2020 13:23:27] "GET /static/icons/settings.svg HTTP/1.1" 304 0
+[23/Sep/2020 13:23:27] "GET /static/icons/info.svg HTTP/1.1" 304 0
+[23/Sep/2020 13:23:27] "GET /static/icons/notification.svg HTTP/1.1" 304 0
+[23/Sep/2020 13:23:28] "GET /static/images/sort_both.png HTTP/1.1" 404 1684
+Not Found: /favicon.ico
+[23/Sep/2020 13:23:28] "GET /favicon.ico HTTP/1.1" 404 2109
+[23/Sep/2020 13:23:30] "GET /static/images/sort_asc.png HTTP/1.1" 404 1681
+Watching for file changes with StatReloader
+[23/Sep/2020 13:24:31] "GET /crud_operation_app/list/ HTTP/1.1" 200 8602
+Not Found: /favicon.ico
+[23/Sep/2020 13:24:31] "GET /favicon.ico HTTP/1.1" 404 2109
+[23/Sep/2020 13:24:32] "GET /static/images/sort_both.png HTTP/1.1" 404 1684
+Watching for file changes with StatReloader
+[23/Sep/2020 13:26:26] "GET /crud_operation_app/list/ HTTP/1.1" 200 8602
+Not Found: /favicon.ico
+[23/Sep/2020 13:26:26] "GET /favicon.ico HTTP/1.1" 404 2109
+[23/Sep/2020 13:26:27] "GET /static/images/sort_both.png HTTP/1.1" 404 1684
+Watching for file changes with StatReloader
+[24/Sep/2020 05:29:06] "GET /crud_operation_app/list/ HTTP/1.1" 200 8602
+Not Found: /favicon.ico
+[24/Sep/2020 05:29:06] "GET /favicon.ico HTTP/1.1" 404 2109
+[24/Sep/2020 05:29:07] "GET /static/images/sort_both.png HTTP/1.1" 404 1684
