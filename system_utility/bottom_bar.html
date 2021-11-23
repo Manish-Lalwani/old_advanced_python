@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script >
+	$(document).ready(function(){
+		$('power_btn').click(function(){
+			console.log("function called")
+			
+		});
+
+		//-----------------save-----------------\\
+	  		$('#power_btn').click(function(){
+	  			alert('power_btn clicked')
+			$.ajax({
+				type: 'POST',
+				cache: false,
+				dataType: 'json',
+				url: "http://127.0.0.1:8000/util/get_all_interface_names/", 
+				success: function(resp){
+				//var res=JSON.parse(resp);
+				  ////var res = resp;
+					////console.log(res)
+					////alert(res)
+					console.log("success");
+
+					
+				},//success	
+				error : function(jqXHR, textStatus, errorThrown){
+					console.log("Error response got is")
+					console.log(errorThrown)
+				}
+				// error: function(xhr, ajaxOptions, thrownError){
+    //                // alert(xhr.status);
+    //                 alert("ERROR");
+    //             },			
+			});//ajax
+			
+		  });//func
+ 	 //end
+
+		});//document ready
+	</script>
+</head>
+
+<body>
+
+<!-- <label id=power_label>Power</label>
+<label id=ethernet_label>Ethernet</label>
+<label id=wifi_label>Wifi</label>
+<label id=user>User</label>
+<label id=vpn_label>VPN</label>
+<label id=firewall_label>Firewall</label>
+ -->
+
+<input type=submit id=power_btn value="power"> <input type=text id=power_txt value="power"><br>
+<input type=submit id=ethernet_btn value="ethernet"> <input type=text id=ethernet_text value="ethernet"><br>
+<input type=submit id=wifi_btn value="wifi"> <input type=text id=wifi_txt value="wifi"><br>
+<input type=submit id=user_btn value="user"> <input type=text id=user_txt value="user"><br>
+<input type=submit id=vpn_btn value="vpn"> <input type=text id=vpn_txt value="vpn"><br>
+<input type=submit id=firewall_btn value="firewall"> <input type=text id=firewall_txt value="firewall"><br>
+</body>
+</html>
+
+
+
