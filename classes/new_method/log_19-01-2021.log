@@ -1,0 +1,66 @@
+19 Jan 21 14:52:19 : Website Initializing.........
+19 Jan 21 14:52:43 : Website Initializing.........
+19 Jan 21 14:54:01 : Website Initializing.........
+19 Jan 21 14:54:26 : Website Initializing.........
+19 Jan 21 14:54:26 : _____________________________________________________________________________________________
+19 Jan 21 14:54:26 : Executing [__new__() 23 - None one_new_method.py]                 | Caller [<module>() 41 - None one_new_method.py]                  
+19 Jan 21 14:54:26 : _____________________________________________________________________________________________
+19 Jan 21 14:54:26 : Executing [__init__() 31 - B one_new_method.py]                   | Caller [<module>() 41 - None one_new_method.py]                  
+19 Jan 21 14:58:23 : Website Initializing.........
+19 Jan 21 14:58:23 : _____________________________________________________________________________________________
+19 Jan 21 14:58:23 : Executing [B() 21 - None one_new_method.py]                       | Caller [<module>() 20 - None one_new_method.py]                  
+19 Jan 21 14:58:23 : _____________________________________________________________________________________________
+19 Jan 21 14:58:23 : Executing [__new__() 25 - None one_new_method.py]                 | Caller [<module>() 43 - None one_new_method.py]                  
+19 Jan 21 14:58:23 : _____________________________________________________________________________________________
+19 Jan 21 14:58:23 : Executing [__init__() 33 - B one_new_method.py]                   | Caller [<module>() 43 - None one_new_method.py]                  
+19 Jan 21 14:58:26 : Website Initializing.........
+19 Jan 21 14:58:26 : _____________________________________________________________________________________________
+19 Jan 21 14:58:26 : Executing [B() 21 - None one_new_method.py]                       | Caller [<module>() 20 - None one_new_method.py]                  
+19 Jan 21 14:58:26 : _____________________________________________________________________________________________
+19 Jan 21 14:58:26 : Executing [__new__() 25 - None one_new_method.py]                 | Caller [<module>() 43 - None one_new_method.py]                  
+19 Jan 21 14:58:26 : _____________________________________________________________________________________________
+19 Jan 21 14:58:26 : Executing [__init__() 33 - B one_new_method.py]                   | Caller [<module>() 43 - None one_new_method.py]                  
+19 Jan 21 15:01:48 : Website Initializing.........
+19 Jan 21 15:01:48 : _____________________________________________________________________________________________
+19 Jan 21 15:01:48 : Executing [B() 21 - None one_new_method.py]                       | Caller [<module>() 20 - None one_new_method.py]                  
+19 Jan 21 15:02:31 : Website Initializing.........
+19 Jan 21 15:02:31 : _____________________________________________________________________________________________
+19 Jan 21 15:02:31 : Executing [B() 21 - None one_new_method.py]                       | Caller [<module>() 20 - None one_new_method.py]                  
+19 Jan 21 15:03:27 : Website Initializing.........
+19 Jan 21 15:03:37 : Website Initializing.........
+19 Jan 21 15:04:13 : Website Initializing.........
+19 Jan 21 15:07:34 : Website Initializing.........
+19 Jan 21 15:09:14 : Website Initializing.........
+19 Jan 21 15:09:14 : _____________________________________________________________________________________________
+19 Jan 21 15:09:14 : Executing [A() 15 - None one_new_method.py]                       | Caller [<module>() 13 - None one_new_method.py]                  
+19 Jan 21 15:09:14 : _____________________________________________________________________________________________
+19 Jan 21 15:09:14 : Executing [B() 26 - None one_new_method.py]                       | Caller [<module>() 24 - None one_new_method.py]                  
+19 Jan 21 15:09:14 : _____________________________________________________________________________________________
+19 Jan 21 15:09:14 : Executing [__init__() 18 - A one_new_method.py]                   | Caller [<module>() 47 - None one_new_method.py]                  
+19 Jan 21 15:09:14 : _____________________________________________________________________________________________
+19 Jan 21 15:09:14 : Executing [__new__() 29 - None one_new_method.py]                 | Caller [<module>() 51 - None one_new_method.py]                  
+19 Jan 21 15:09:14 : _____________________________________________________________________________________________
+19 Jan 21 15:09:14 : Executing [__init__() 37 - B one_new_method.py]                   | Caller [<module>() 51 - None one_new_method.py]                  
+19 Jan 21 15:10:26 : Website Initializing.........
+19 Jan 21 15:10:26 : _____________________________________________________________________________________________
+19 Jan 21 15:10:26 : Executing [A() 15 - None one_new_method.py]                       | Caller [<module>() 13 - None one_new_method.py]                  
+19 Jan 21 15:10:26 : _____________________________________________________________________________________________
+19 Jan 21 15:10:26 : Executing [B() 26 - None one_new_method.py]                       | Caller [<module>() 24 - None one_new_method.py]                  
+19 Jan 21 15:10:26 : _____________________________________________________________________________________________
+19 Jan 21 15:10:26 : Executing [__init__() 18 - A one_new_method.py]                   | Caller [<module>() 47 - None one_new_method.py]                  
+19 Jan 21 15:10:26 : _____________________________________________________________________________________________
+19 Jan 21 15:10:26 : Executing [__new__() 29 - None one_new_method.py]                 | Caller [<module>() 51 - None one_new_method.py]                  
+19 Jan 21 15:10:26 : _____________________________________________________________________________________________
+19 Jan 21 15:10:26 : Executing [__init__() 37 - B one_new_method.py]                   | Caller [<module>() 51 - None one_new_method.py]                  
+19 Jan 21 15:10:36 : Website Initializing.........
+19 Jan 21 15:10:36 : _____________________________________________________________________________________________
+19 Jan 21 15:10:36 : Executing [A() 15 - None one_new_method.py]                       | Caller [<module>() 13 - None one_new_method.py]                  
+19 Jan 21 15:10:36 : _____________________________________________________________________________________________
+19 Jan 21 15:10:36 : Executing [B() 26 - None one_new_method.py]                       | Caller [<module>() 24 - None one_new_method.py]                  
+19 Jan 21 15:10:36 : _____________________________________________________________________________________________
+19 Jan 21 15:10:36 : Executing [__init__() 18 - A one_new_method.py]                   | Caller [<module>() 47 - None one_new_method.py]                  
+19 Jan 21 15:10:36 : _____________________________________________________________________________________________
+19 Jan 21 15:10:36 : Executing [__new__() 29 - None one_new_method.py]                 | Caller [<module>() 51 - None one_new_method.py]                  
+19 Jan 21 15:10:36 : _____________________________________________________________________________________________
+19 Jan 21 15:10:36 : Executing [__init__() 37 - B one_new_method.py]                   | Caller [<module>() 51 - None one_new_method.py]                  
+19 Jan 21 15:14:41 : Website Initializing.........
