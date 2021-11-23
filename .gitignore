@@ -3,3 +3,5 @@
 **/metastore_db
 **/.idea
 */__pycache__
+**/attached_files
+**/attachment_files
